@@ -2,7 +2,7 @@
 var timer = document.querySelector('#time');
 var thebox = document.querySelector("#theBox");
 var startBtn = document.querySelector(".start");
-var question_container =document.querySelector("#question-container");
+var question_container = document.querySelector("#question-container");
 var titles = document.querySelector("#title");
 var choices = document.querySelector("#choices");
 var gameOver = document.querySelector("#gameOver");
