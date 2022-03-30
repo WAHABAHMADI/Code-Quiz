@@ -1,3 +1,45 @@
 .hidden{
     display: none
 }
+
+main {
+    text-align: center;
+    background-color: darkcyan;
+    border: 2px solid black;
+}
+
+.start {
+    background-color: lightgreen;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightgreen;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid black;
+    display: inline-block
+}
+
+
+div {
+    text-align: right;
+    font-size: medium;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+#choices {
+    text-align: center;
+    display: grid;
+    font-size: 20px;
+    background-color: lightgreen;
+}
+
+button {
+    background-color: lightgreen;
+}

@@ -4,6 +4,7 @@ function savedScores(){
     highScores.forEach(function(score){
         var grades =document.createElement("li")
         grades.textContent = score.score + " " + score.userInitial
+        var playerScore = document.querySelector ("#scores")
         playerScore.appendChild(grades);
         
     })
