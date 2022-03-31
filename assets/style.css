@@ -49,16 +49,20 @@ button {
     background-color: lightgreen;
 }
 
+.goBack {
+    
+    margin: 0px;
+}
+
 #scores {
     
     text-align: left;
     background-color: rgb(70, 151, 70);
-    display: inline-block;
-    margin: 25px;
-    border : solid black;
+    border : 2px solid black;
+    display: grid;
 }
+
 
 .clear {
     display: block;
-    margin: 25px;
 }

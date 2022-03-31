@@ -61,7 +61,6 @@ var questions = [
 
 function startGame() {
   //when the start button is clicked, the timer is started, the box container is hidden, the question container is displayed
-
   timer.textContent = time;
 
   timerEl = setInterval(function () {
@@ -98,7 +97,6 @@ function showQuestion() {
 function checkAnswers() {
   if (this.value !== questions[questionIndex].rightAnswer) {
     time -= 10;
-
     timer.textContent = time;
   }
 
@@ -124,7 +122,6 @@ function totalScore() {
   var initialsVarible = initials.value;
   var existingHighScores = localStorage.getItem("highScores");
   console.log("existingHighScores: ", existingHighScores)
-  //var highScores = [parseIntJSON.parse(localStorage.getItem("highScores"))] || []
   console.log(highScores);
   var newScore = { score: time, userInitial: initialsVarible };
   console.log("new score: ", newScore)
@@ -136,6 +133,7 @@ function totalScore() {
     var newHighScore = highScores
     console.log("No high score, create init high scores: ", newHighScore)
 
+    //create an score array that will hold all your userscore objects. ** check local storage to see if there are any scores saved there already (retrieve data from local storage) or make this an empty array
     localStorage.setItem("highScores", JSON.stringify(newHighScore));
   } else {
     console.log("We have high score, add new high score: ", newScore)
@@ -146,26 +144,6 @@ function totalScore() {
    location.replace("./scores.html");
 }
 
-
-//create an score array that will hold all your userscore objects. ** check local storage to see if there are any scores saved there already (retrieve data from local storage) or make this an empty array
-
-//create a new user score object that contains the users score and initals
-
-//push the new user score object into the score array
-
-//save to local storage
-
-//redirect the page to the scores.html
-// function savedScores(){
-//     var highScores = [JSON.parse(localStorage.getItem("highScores"))]
-//     console.log (highScores);
-//     highScores.forEach(function(score){
-//     var grades =document.createElement("li")
-//     grades.textContent = score.score + " " + score.userInitial
-//     playerScore.appendChild(grades);
-//     })
-
-//
 
 //eventlistenrs
 startBtn.addEventListener("click", startGame);
