@@ -123,22 +123,29 @@ function totalScore() {
   //grab the value of what the user types into the intials box
   var initialsVarible = initials.value;
   var existingHighScores = localStorage.getItem("highScores");
-
-  // var highScores = [parseIntJSON.parse(localStorage.getItem("highScores"))] || []
-  // console.log(highScores);
+  console.log("existingHighScores: ", existingHighScores)
+  //var highScores = [parseIntJSON.parse(localStorage.getItem("highScores"))] || []
+  console.log(highScores);
   var newScore = { score: time, userInitial: initialsVarible };
+  console.log("new score: ", newScore)
 
   var highScores = [];
 
   if (!existingHighScores) {
-    var newHighScore = highScores.push(newScore);
+    highScores.push(newScore);
+    var newHighScore = highScores
+    console.log("No high score, create init high scores: ", newHighScore)
+
     localStorage.setItem("highScores", JSON.stringify(newHighScore));
+  } else {
+    console.log("We have high score, add new high score: ", newScore)
+    var parsedHighScores = JSON.parse(existingHighScores);
+    parsedHighScores.push(newScore);
+    localStorage.setItem("highScores", JSON.stringify(parsedHighScores));
   }
-  var parsedHighScores = JSON.parse(existingHighScores);
-  parsedHighScores.push(newScore);
-  localStorage.setItem("highScores", JSON.stringify(parsedHighScores));
-  location.replace("./scores.html");
+   location.replace("./scores.html");
 }
+
 
 //create an score array that will hold all your userscore objects. ** check local storage to see if there are any scores saved there already (retrieve data from local storage) or make this an empty array
 

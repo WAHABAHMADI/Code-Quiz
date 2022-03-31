@@ -1,4 +1,4 @@
-.hidden{
+ .hidden{
     display: none
 }
 
@@ -40,6 +40,25 @@ div {
     background-color: lightgreen;
 }
 
+#title {
+    background-color: rgb(135, 179, 97);
+    border: solid black;
+}
+
 button {
     background-color: lightgreen;
+}
+
+#scores {
+    
+    text-align: left;
+    background-color: rgb(70, 151, 70);
+    display: inline-block;
+    margin: 25px;
+    border : solid black;
+}
+
+.clear {
+    display: block;
+    margin: 25px;
 }
